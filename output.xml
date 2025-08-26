@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-08-26T14:32:38.072650" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Ui Detection" source="c:\Users\Lamba\OneDrive\Desktop\T\test_ui_detection.robot">
+<test id="s1-t1" name="Test Button Detection" line="8">
+<kw name="Detect Button By Text" owner="UIElementDetectorRF">
+<msg time="2025-08-26T14:32:39.813822" level="INFO">Detecting button with text 'Rechercher' on https://payby.ma/demo/index.php</msg>
+<msg time="2025-08-26T14:32:48.132202" level="INFO">Button found with confidence 0.64 at xpath: //*[@id="cinInput"]</msg>
+<msg time="2025-08-26T14:32:48.132527" level="INFO">${result} = {'xpath': '//*[@id="cinInput"]', 'dom_element': {'alt': '', 'attributes': [{'name': 'type', 'value': 'text'}, {'name': 'id', 'value': 'cinInput'}], 'checked': False, 'className': '', 'href': '', 'id':...</msg>
+<var>${result}</var>
+<arg>${URL}</arg>
+<arg>Rechercher</arg>
+<arg>0.3</arg>
+<arg>True</arg>
+<doc>Detect a button by its text content.</doc>
+<status status="PASS" start="2025-08-26T14:32:39.813492" elapsed="8.319117"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2025-08-26T14:32:48.133423" level="INFO">Argument types are:
+&lt;class 'dict'&gt;
+&lt;class 'NoneType'&gt;</msg>
+<arg>${result}</arg>
+<arg>${None}</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" start="2025-08-26T14:32:48.133099" elapsed="0.000471"/>
+</kw>
+<kw name="Get Element Xpath" owner="UIElementDetectorRF">
+<msg time="2025-08-26T14:32:48.134231" level="INFO">${xpath} = //*[@id="cinInput"]</msg>
+<var>${xpath}</var>
+<arg>${result}</arg>
+<doc>Get the XPath from a detection result.</doc>
+<status status="PASS" start="2025-08-26T14:32:48.133976" elapsed="0.000350"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-08-26T14:32:48.135126" level="INFO">Found button at: //*[@id="cinInput"]</msg>
+<arg>Found button at: ${xpath}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-08-26T14:32:48.134873" elapsed="0.000385"/>
+</kw>
+<kw name="Get Detection Confidence" owner="UIElementDetectorRF">
+<msg time="2025-08-26T14:32:48.136478" level="INFO">${confidence} = 0.6433649659156799</msg>
+<var>${confidence}</var>
+<arg>${result}</arg>
+<doc>Get the confidence score from a detection result.</doc>
+<status status="PASS" start="2025-08-26T14:32:48.135839" elapsed="0.000897"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${confidence} &gt; 0.5</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-08-26T14:32:48.137552" elapsed="0.000684"/>
+</kw>
+<status status="PASS" start="2025-08-26T14:32:39.812767" elapsed="8.326370"/>
+</test>
+<status status="PASS" start="2025-08-26T14:32:38.075656" elapsed="10.065453"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Ui Detection" id="s1" pass="1" fail="0" skip="0">Test Ui Detection</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
