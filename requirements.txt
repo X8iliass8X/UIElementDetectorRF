@@ -1,5 +1,7 @@
-ultralytics 
-opencv-python 
-selenium 
-pillow 
+ultralytics
+opencv-python
+selenium
+Pillow
 numpy
+robotframework
+robotframework-seleniumlibrary
